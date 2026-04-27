@@ -12,10 +12,12 @@ namespace Biblioteca
         public int code;
         public string descr;
         public double peso;
+       
 
         public Caja()
         {
         }
+
 
         public override string ToString()
         {

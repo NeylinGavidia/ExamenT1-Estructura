@@ -44,7 +44,7 @@ namespace ExamenT1
                         p.descr = Console.ReadLine();
                         Console.Write("Ingrese el peso de la caja: ");
                         p.peso = double.Parse(Console.ReadLine());
-                        mt.Contador();
+                        mt.Contador(p);
                         mt.Push(p);
                         Console.WriteLine();
                         Console.Write("Registrado correctamente ^^");

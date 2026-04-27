@@ -31,7 +31,7 @@ namespace Biblioteca
         public Caja Pop()
         {
             try {
-            Caja save = null;
+            Caja save = null; //la caja guardada es la que se desapila
             if (cima != null)
             {
                 save = cima.dato;
@@ -69,12 +69,14 @@ namespace Biblioteca
             { Console.WriteLine("Vacío"); }
             return cima.dato;
         }
-        //public void Movercaja(Métodos ruta)
-        //{
-        //    while (!Vacio())
-        //    {
-        //        destino.Push()
-        //    }
-        //}
+        public void Movercaja(Inventario ruta)
+        {
+            while (cima != null)
+            {
+                Caja save = cima.dato;
+                cima = cima.sig; //la cima deja de contarse y la cima pasa a ser la siguiente
+                ruta.Guardar(save);
+            }
+        }
     }
 }

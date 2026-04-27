@@ -26,7 +26,7 @@ namespace ExamenT1
                 Console.WriteLine("1. Apilar");
                 Console.WriteLine("2. Mostrar lista");
                 Console.WriteLine("3. Desapilar");
-                Console.WriteLine("4. Cajas livianas");
+                Console.WriteLine("4. Cajas liviana");
                 Console.WriteLine("5. Cajas pesadas");
                 Console.WriteLine("0. Salir");
                 Console.Write("Ingrese una opcion: ");

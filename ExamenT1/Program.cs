@@ -61,7 +61,6 @@ namespace ExamenT1
                         Caja desapilada = mt.Pop();
                         if (desapilada != null)
                         {
-                            Console.WriteLine("Desapilado:");
                             Console.WriteLine(desapilada);
 
                             total.Guardar(desapilada);

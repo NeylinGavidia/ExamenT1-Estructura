@@ -10,12 +10,13 @@ namespace Biblioteca
     {
 
         Nodo cima = null;
-        static int incr = 1000;
+        static int incr = 1000; //va ayudar a poner codigo automaticamente empezando desde 1000
 
-        public void Push(Caja c)
+        public void Push(Caja c) //apilar
         {
             Nodo nuevo = new Nodo();
             nuevo.dato = c;
+            // nuevo(2) - > 1 (cima)
             nuevo.sig = cima;
             cima = nuevo;
         }

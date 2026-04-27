@@ -35,6 +35,7 @@ namespace ExamenT1
                 Console.WriteLine("0. Salir");
                 Console.Write("Ingrese una opcion: ");
                 op = int.Parse(Console.ReadLine());
+                Console.WriteLine();
 
                 switch (op)
                 {

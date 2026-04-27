@@ -16,7 +16,7 @@ namespace Biblioteca
 
             Nodo nuevo = new Nodo();
             nuevo.dato = c;
-            //caja1 -> caja2(cima)=nuevo
+            //caja1 -> caja2(cima)=nuevo -> vacio
             nuevo.sig = null;
 
             if(cima == null) //para que ingrese como primer dato
@@ -44,10 +44,6 @@ namespace Biblioteca
                 actual = actual.sig;
             }
            
-        }
-        public void Limpiar()
-        {
-            cima = null;
         }
     }
 }

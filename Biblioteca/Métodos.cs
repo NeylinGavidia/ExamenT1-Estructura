@@ -29,6 +29,23 @@ namespace Biblioteca
                 actual = actual.sig;
             }
         }
+
+        public void Buscar(int seek)
+        {
+            Nodo actual = cima;
+
+            while (actual != null)
+            {
+                if (actual.dato.code == seek)
+                {
+                    Console.WriteLine();
+                    Console.Write("Elemento encontrado");
+                  
+                }
+                actual = actual.sig;
+            }
+            return;
+        }
         public Caja Pop()
         {
      

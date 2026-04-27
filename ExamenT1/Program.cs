@@ -45,7 +45,7 @@ namespace ExamenT1
                     case 1:
 
                         Caja p = new Caja();
-                        Console.Write("Ingrese una descripción de la caja: ");
+                        Console.Write("Ingrese una descripcion de la caja: ");
                         p.descr = Console.ReadLine();
                         Console.Write("Ingrese el peso de la caja: ");
                         p.peso = double.Parse(Console.ReadLine());
@@ -55,8 +55,10 @@ namespace ExamenT1
                         Console.Write("Registrado correctamente ^^");
                         break;
                     case 2:
-
-                        mt.Mostrar();
+                        int c;
+                        Console.Write("Ingrese el codigo de la caja: ");
+                        c = int.Parse(Console.ReadLine());
+                        mt.Buscar(c);
                         break;
                     case 3:
                         Caja desapilada = mt.Pop();

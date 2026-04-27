@@ -8,8 +8,8 @@ namespace Biblioteca
 {
     public class Métodos
     {
-        
-        Nodo cima = new Nodo();
+
+        Nodo cima = null;
         static int incr = 1000;
 
         public void Push(Caja c)
@@ -30,7 +30,7 @@ namespace Biblioteca
         }
         public Caja Pop()
         {
-            try {
+     
             Caja save = null; //la caja guardada es la que se desapila
             if (cima != null)
             {
@@ -47,11 +47,6 @@ namespace Biblioteca
 
             }
             return save;
-            }
-            catch (NullReferenceException)
-            {
-                throw new Exception("Error de límite: No se puede desapilar más");
-            }
             
         }
         public void Contador(Caja d)
@@ -59,24 +54,6 @@ namespace Biblioteca
             d.code = incr;
             incr++;
         }
-        public bool Vacio()
-        {
-            return cima == null;
-        }
-        public Caja Peek()
-        {
-            if (cima == null)
-            { Console.WriteLine("Vacío"); }
-            return cima.dato;
-        }
-        public void Movercaja(Inventario ruta)
-        {
-            while (cima != null)
-            {
-                Caja save = cima.dato;
-                cima = cima.sig; //la cima deja de contarse y la cima pasa a ser la siguiente
-                ruta.Guardar(save);
-            }
-        }
+        
     }
 }

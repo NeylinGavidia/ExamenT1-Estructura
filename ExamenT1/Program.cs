@@ -15,6 +15,9 @@ namespace ExamenT1
             //MENU
 
             Métodos mt = new Métodos();
+            Inventario total = new Inventario();
+            Inventario pesado = new Inventario();
+            Inventario liviano = new Inventario();
 
             Console.WriteLine("********MENU*********");
 
@@ -26,8 +29,9 @@ namespace ExamenT1
                 Console.WriteLine("1. Apilar");
                 Console.WriteLine("2. Mostrar lista");
                 Console.WriteLine("3. Desapilar");
-                Console.WriteLine("4. Cajas liviana");
+                Console.WriteLine("4. Inventario");
                 Console.WriteLine("5. Cajas pesadas");
+                Console.WriteLine("6. Cajas livianas");
                 Console.WriteLine("0. Salir");
                 Console.Write("Ingrese una opcion: ");
                 op = int.Parse(Console.ReadLine());
@@ -54,19 +58,42 @@ namespace ExamenT1
                         mt.Mostrar();
                         break;
                     case 3:
-                        try
+                        Caja desapilada = mt.Pop();
+                        if (desapilada != null)
                         {
-                            Console.WriteLine();
-                            Console.WriteLine("Desapilado con éxito:");
-                            Console.WriteLine();
-                            Console.WriteLine(mt.Pop());
+                            Console.WriteLine("Desapilado:");
+                            Console.WriteLine(desapilada);
 
+                            total.Guardar(desapilada);
+
+                            if (desapilada.peso > 50)
+                                pesado.Guardar(desapilada);
+                            else
+                                liviano.Guardar(desapilada);
                         }
-                        catch (Exception e)
+                        else
                         {
-                            Console.WriteLine(e.Message);
+                            Console.WriteLine("Pila vacía");
                         }
 
+                        break;
+                    case 4:
+
+                        Console.WriteLine("Inventario general");
+                        Console.WriteLine();
+                        total.Mostrar();
+                        break;
+                    case 5:
+
+                        Console.WriteLine("Inventario pesado");
+                        Console.WriteLine();
+                        pesado.Mostrar();
+                        break;
+                    case 6:
+
+                        Console.WriteLine("Inventario liviano");
+                        Console.WriteLine();
+                        liviano.Mostrar();
                         break;
                     default:
                         Console.WriteLine("Opcion no valida");

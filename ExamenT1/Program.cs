@@ -27,7 +27,7 @@ namespace ExamenT1
             {
                 Console.Clear();
                 Console.WriteLine("1. Apilar");
-                Console.WriteLine("2. Mostrar lista");
+                Console.WriteLine("2. Búsqueda");
                 Console.WriteLine("3. Desapilar");
                 Console.WriteLine("4. Inventario");
                 Console.WriteLine("5. Cajas pesadas");

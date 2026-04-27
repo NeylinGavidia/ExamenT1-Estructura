@@ -67,9 +67,13 @@ namespace ExamenT1
                             total.Guardar(desapilada);
 
                             if (desapilada.peso > 50)
+                            {
                                 pesado.Guardar(desapilada);
+                            }
                             else
+                            {
                                 liviano.Guardar(desapilada);
+                            }
                         }
                         else
                         {

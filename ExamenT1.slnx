@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="Biblioteca/Biblioteca.csproj" />
-  <Project Path="ExamenT1/ExamenT1.csproj" />
+  <Project Path="Biblioteca/Biblioteca.csproj" Id="5bf25404-61c3-4cc2-9325-21322e12db41" />
+  <Project Path="ExamenT1/ExamenT1.csproj" Id="8c6a3267-6cca-4bcf-a209-58393faa0632" />
 </Solution>

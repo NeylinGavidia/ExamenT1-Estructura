@@ -14,8 +14,10 @@ namespace Biblioteca
         public double peso;
        
 
-        public Caja()
+        public Caja() //(int code)
         {
+            //Random r = new Random();
+            //aqui tambien se puede hacer el codigo en secuencia automatica
         }
 
 
